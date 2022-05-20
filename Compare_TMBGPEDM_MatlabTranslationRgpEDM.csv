@@ -1,0 +1,10 @@
+,L-BFGS-B (TMB),nlminb (TMBGP),rprop (TMB),,GPEDM package
+phi1,1.298,1.298,1.298,phi1,1.714
+phi2,2.798,2.798,2.798,phi2,2.292
+phi3,2.503,2.503,2.502,phi3,1.752
+tau (Sigma2),64128.588,64128.817,64129.414,Sigma2,1.426
+g (Ve),37952.156,37952.216,37955.168,Ve,0.061
+rho,0.613,0.613,0.613,rho,0.527
+predetermined Var(obsY),84326.281,84326.281,84326.281,,NA
+In-sample r,0.81,0.81,0.81,,0.99
+"*SEAMAP Brown Shrimp (1987-2019), E=3, tau=1, nsite=9",,,,,
