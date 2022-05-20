@@ -1,3 +1,3 @@
 # EDMShrimp
 
-This is my Repo to learn EDM and apply to GOM Shrimp
+This is my Repo to learn EDM and apply to Gulf of Mexico Shrimp.
