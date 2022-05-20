@@ -3,7 +3,7 @@
 
 rm(list = ls())
 
-setwd("C:\\Users\\lewis.coggins\\Documents\\EDM\\ShrimpEDM")
+setwd("C:\\Users\\lewis.coggins\\Documents\\GitHub\\EDMShrimp")
 
 library("rEDM");library("readxl");library("dplyr")
 

@@ -2,7 +2,7 @@
 
 rm(list = ls())
 
-setwd("C:\\Users\\lewis.coggins\\Documents\\EDM\\ShrimpEDM")
+setwd("C:\\Users\\lewis.coggins\\Documents\\GitHub\\EDMShrimp")
 
 library("readxl");library("dplyr");library(GPEDM);library(ggplot2);library(tidyr)
 
