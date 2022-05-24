@@ -89,5 +89,4 @@ r=cor(preds$Observations, preds$Predictions)
 rho=ComputeError(preds$Observations, preds$Predictions)$rho
 text(1995,max(preds$Observations,na.rm=T),paste('rho=',round(rho,4)))
 
-#fit=SMap(dataFrame=inpdat,lib=lib,pred=pred,tau=TAU,columns=names(inpdat)[2],target=names(inpdat)[2])
 
