@@ -159,20 +159,22 @@ names(dat)[2]='extent'
 
 for(i in 1:8){
 SEAMAPFIT=fitGP(data =dat, y = "Index", pop = "extent", E=i, tau=1, scaling = "global", predictmethod = "loo")
-
+par(mfcol=c(1,1))
 if(i==1){plot(dat$Year,SEAMAPFIT$outsampresults$obs,ylab='Index',xlab='Year',pch=16)}
-if(i==8){lines(dat$Year,SEAMAPFIT$outsampresults$predmean,lty=i, col=i,lwd=4)}
+
 lines(dat$Year,SEAMAPFIT$outsampresults$predmean,lty=i, col=i)
 
 rhovec[i]=ComputeError(SEAMAPFIT$outsampresults$obs, SEAMAPFIT$outsampresults$predmean)$rho
+
 if(i==8){
+  lines(dat$Year,SEAMAPFIT$outsampresults$predmean,lty=i, col='black',lwd=4)
   text(1995,max(SEAMAPFIT$outsampresults$obs,na.rm=T),paste('rho=',round(rhovec[i],2)))
   text(1995,max(SEAMAPFIT$outsampresults$obs,na.rm=T)*.95,paste('E=',i))
-  }
+  getconditionals(SEAMAPFIT)
+  seqpred=predict(SEAMAPFIT,predictmethod = "sequential")
+  plot(seqpred)
+}
 
-getconditionals(SEAMAPFIT)
-seqpred=predict(SEAMAPFIT,predictmethod = "sequential")
-plot(seqpred)
 phimat[i,1:i]=SEAMAPFIT$pars[1:i]
 if(i<8){phimat[i,(i+1):8]=NA}
 
