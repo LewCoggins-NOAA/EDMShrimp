@@ -148,6 +148,12 @@ text(1995,max(plotdat$obs,na.rm=T)*.9,"BigZone")
 
 #Now Do GP-EDM On Adam's SEAMAPIndex
 
+
+setwd("C:\\Users\\lewis.coggins\\Documents\\GitHub\\EDMShrimp")
+
+library("readxl");library("dplyr");library(GPEDM);library(ggplot2);library(tidyr);library(rEDM)
+
+
 phimat=matrix(1,8,8)
 rhovec=rep(1,8)
 
@@ -160,7 +166,7 @@ names(dat)[2]='extent'
 for(i in 1:8){
 SEAMAPFIT=fitGP(data =dat, y = "Index", pop = "extent", E=i, tau=1, scaling = "global", predictmethod = "loo")
 par(mfcol=c(1,1))
-if(i==1){plot(dat$Year,SEAMAPFIT$outsampresults$obs,ylab='Index',xlab='Year',pch=16)}
+if(i==1){plot(dat$Year,SEAMAPFIT$outsampresults$obs,type='b',ylab='Index',xlab='Year',pch=16)}
 
 lines(dat$Year,SEAMAPFIT$outsampresults$predmean,lty=i, col=i)
 
