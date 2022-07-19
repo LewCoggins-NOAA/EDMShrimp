@@ -16,6 +16,8 @@ colnames(dat)[11]<-"mean"
 zones=c("zone_11","zone_14","zone_15","zone_16","zone_17","zone_18","zone_19","zone_20","zone_21","mean")
 e=c(3,7,4,4,7,7,7,7,6)#e=rep(7,9)
 
+
+
 for(i in 1:9){
   
 #i=9

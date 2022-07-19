@@ -9,13 +9,13 @@
 #
 ########################################################################################################
 #setwd("~/Desktop")
-setwd("C:\\Users\\lewis.coggins\\Documents\\EDM\\ShrimpEDM")
+setwd("C:\\Users\\lewis.coggins\\Documents\\GitHub\\EDMShrimp")
 library(TMB) # TMB package is required and C code must be pre-compiled
 source("TMB_hGPEDM_example_v1_cht.R") # maintained by Cheng-Han
 dyn.load(dynlib("hgpEDMtmb_v1"))
 #
-setwd("/Users/admin/Desktop/SpatialEDM_shrimps")
-setwd("C:\\Users\\lewis.coggins\\Documents\\EDM\\ShrimpEDM")
+#setwd("/Users/admin/Desktop/SpatialEDM_shrimps")
+setwd("C:\\Users\\lewis.coggins\\Documents\\GitHub\\EDMShrimp")
 cpue.all <- read.csv("forLewExample_cpue_nineStatzones_brownshrimp_summer.csv") #Brown shrimps summer CPUE from SEAMAP
 str(cpue.all)
 #
